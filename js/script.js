@@ -20,14 +20,14 @@ mobileMenu.querySelectorAll('a').forEach(link => {
 
 /* Filtro de carta por categoría */
 const tabs = document.querySelectorAll('.menu-tab');
-const dishes = document.querySelectorAll('.dish');
+const menuLists = document.querySelectorAll('.menu-list');
 
 tabs.forEach(tab => {
   tab.addEventListener('click', () => {
     tabs.forEach(t => t.classList.remove('active'));
     tab.classList.add('active');
     const cat = tab.dataset.cat;
-    dishes.forEach(d => d.classList.toggle('show', d.dataset.cat === cat));
+    menuLists.forEach(list => list.classList.toggle('show', list.dataset.cat === cat));
   });
 });
 
@@ -49,18 +49,32 @@ nextBtn.addEventListener('click', () => scrollReviews(1));
 const cookieBanner = document.getElementById('cookieBanner');
 const cookieAccept = document.getElementById('cookieAccept');
 const cookieReject = document.getElementById('cookieReject');
+const waFloat = document.querySelector('.wa-float');
 const COOKIE_KEY = 'mezcalrock_cookie_choice';
+
+function positionWaFloat() {
+  if (cookieBanner.classList.contains('show')) {
+    waFloat.style.bottom = (cookieBanner.offsetHeight + 32) + 'px';
+  } else {
+    waFloat.style.bottom = '';
+  }
+}
 
 if (!localStorage.getItem(COOKIE_KEY)) {
   cookieBanner.classList.add('show');
 }
+positionWaFloat();
+window.addEventListener('resize', positionWaFloat);
+
 cookieAccept.addEventListener('click', () => {
   localStorage.setItem(COOKIE_KEY, 'accepted');
   cookieBanner.classList.remove('show');
+  positionWaFloat();
 });
 cookieReject.addEventListener('click', () => {
   localStorage.setItem(COOKIE_KEY, 'rejected');
   cookieBanner.classList.remove('show');
+  positionWaFloat();
 });
 
 /* Header con fondo sólido al hacer scroll */
