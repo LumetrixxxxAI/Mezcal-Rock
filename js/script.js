@@ -76,11 +76,3 @@ cookieReject.addEventListener('click', () => {
   cookieBanner.classList.remove('show');
   positionWaFloat();
 });
-
-/* Header transparente -> sólido al hacer scroll */
-const header = document.getElementById('siteHeader');
-function updateHeader() {
-  header.classList.toggle('scrolled', window.scrollY > 10);
-}
-updateHeader();
-window.addEventListener('scroll', updateHeader);
