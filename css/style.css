@@ -7,18 +7,18 @@
   --paper-alt:#efe3c9;
   --ink:#241c12;
   --ink-soft:#6b5f4c;
-  --pink:#c05a72;
-  --yellow:#d9a441;
-  --yellow-soft:#eeddb3;
-  --teal:#2c8a7d;
-  --red:#b13c2c;
+  --pink:#e0527a;
+  --yellow:#eeae2e;
+  --yellow-soft:#f2d68a;
+  --teal:#16a394;
+  --red:#d43a2a;
   --card:#fffbf1;
   --font-display:'Luckiest Guy', cursive;
   --font-body:'Poppins', sans-serif;
   --header-h:80px;
-  --border:1.5px solid var(--ink);
-  --shadow:0 10px 26px rgba(36,28,18,.14);
-  --shadow-sm:0 6px 16px rgba(36,28,18,.1);
+  --border:2px solid var(--ink);
+  --shadow:4px 4px 0 var(--ink);
+  --shadow-sm:3px 3px 0 var(--ink);
 }
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
@@ -247,6 +247,7 @@ section{padding:90px 0;}
   overflow:hidden;
   box-shadow:var(--shadow);
   aspect-ratio:4/5;
+  transform:rotate(2deg);
 }
 .hero-photo img{width:100%;height:100%;object-fit:cover;}
 .hero-stamp{
@@ -336,7 +337,9 @@ section{padding:90px 0;}
   box-shadow:var(--shadow-sm);
   transition:transform .2s, box-shadow .2s;
 }
-.dcard:hover{transform:translateY(-4px);box-shadow:var(--shadow);}
+.dcard:nth-child(odd){transform:rotate(-1.5deg);}
+.dcard:nth-child(even){transform:rotate(1.5deg);}
+.dcard:hover{transform:rotate(0deg) translateY(-4px);box-shadow:var(--shadow);}
 .dcard .dimg{aspect-ratio:1/1;overflow:hidden;border-bottom:var(--border);}
 .dcard .dimg img{width:100%;height:100%;object-fit:cover;}
 .dcard .dbody{padding:16px 14px 18px;text-align:center;}
@@ -500,7 +503,9 @@ section{padding:90px 0;}
   display:block;
   transition:transform .2s;
 }
-.gallery-grid a:hover{transform:translateY(-4px);}
+.gallery-grid a:nth-child(3n+1){transform:rotate(-1.5deg);}
+.gallery-grid a:nth-child(3n+2){transform:rotate(1.5deg);}
+.gallery-grid a:hover{transform:rotate(0) translateY(-4px);}
 .gallery-grid img{
   width:100%;height:100%;
   object-fit:cover;
