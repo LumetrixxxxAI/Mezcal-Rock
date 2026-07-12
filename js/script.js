@@ -77,8 +77,10 @@ cookieReject.addEventListener('click', () => {
   positionWaFloat();
 });
 
-/* Header con fondo sólido al hacer scroll */
+/* Header transparente -> sólido al hacer scroll */
 const header = document.getElementById('siteHeader');
-window.addEventListener('scroll', () => {
-  header.style.boxShadow = window.scrollY > 10 ? '0 8px 24px rgba(0,0,0,.35)' : 'none';
-});
+function updateHeader() {
+  header.classList.toggle('scrolled', window.scrollY > 10);
+}
+updateHeader();
+window.addEventListener('scroll', updateHeader);
