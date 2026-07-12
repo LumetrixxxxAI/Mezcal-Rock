@@ -424,8 +424,8 @@ section{padding:96px 0;}
 /* ---------- Galería ---------- */
 .gallery-grid{
   display:grid;
-  grid-template-columns:repeat(4,1fr);
-  grid-auto-rows:190px;
+  grid-template-columns:repeat(3,1fr);
+  grid-auto-rows:260px;
   gap:14px;
 }
 .gallery-grid img{
@@ -436,8 +436,6 @@ section{padding:96px 0;}
 }
 .gallery-grid a{border-radius:12px;overflow:hidden;display:block;}
 .gallery-grid a:hover img{transform:scale(1.05);}
-.g-wide{grid-column:span 2;}
-.g-tall{grid-row:span 2;}
 
 /* ---------- Opiniones ---------- */
 .reviews-wrap{position:relative;}
@@ -595,8 +593,7 @@ footer .logo .flame{color:var(--gold);}
 }
 
 @media (max-width:520px){
-  .gallery-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:140px;}
-  .g-wide{grid-column:span 1 !important;}
+  .gallery-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:160px;}
   .hero-actions .btn{flex:1 1 auto;}
   .destacados-grid{grid-template-columns:1fr 1fr;}
 }
