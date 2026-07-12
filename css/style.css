@@ -594,7 +594,7 @@ section{padding:90px 0;}
 .info-row h4{font-family:var(--font-display);font-size:.95rem;margin-bottom:4px;}
 .info-row p{color:var(--ink-soft);font-size:.92rem;font-weight:500;}
 .schedule-table{width:100%;font-size:.9rem;color:var(--ink-soft);font-weight:500;}
-.schedule-table td{padding:3px 0;}
+.schedule-table td{padding:6px 0;vertical-align:top;line-height:1.5;}
 .schedule-table td:last-child{text-align:right;color:var(--ink);font-weight:800;}
 
 /* ---------- Footer ---------- */
