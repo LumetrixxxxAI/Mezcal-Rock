@@ -596,6 +596,7 @@ section{padding:90px 0;}
 .schedule-table{width:100%;font-size:.9rem;color:var(--ink-soft);font-weight:500;}
 .schedule-table td{padding:6px 0;vertical-align:top;line-height:1.5;}
 .schedule-table td:last-child{text-align:right;color:var(--ink);font-weight:800;}
+.time-pair{display:inline-block;text-align:center;line-height:1.5;}
 
 /* ---------- Footer ---------- */
 footer{
