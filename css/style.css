@@ -19,7 +19,6 @@
   --border:2px solid var(--ink);
   --shadow:4px 4px 0 var(--ink);
   --shadow-sm:3px 3px 0 var(--ink);
-  --mobile-bar-h:68px;
 }
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
@@ -389,22 +388,6 @@ section{padding:90px 0;}
 .wa-float:hover{transform:scale(1.06);}
 .wa-float svg{width:30px;height:30px;fill:#fff;}
 
-/* ---------- Barra fija móvil ---------- */
-.mobile-cta-bar{display:none;}
-.mcb-btn{
-  flex:1;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:8px;
-  font-family:var(--font-body);
-  font-weight:700;
-  font-size:.92rem;
-}
-.mcb-btn svg{width:18px;height:18px;fill:currentColor;flex:0 0 18px;}
-.mcb-call{background:var(--card);color:var(--ink);}
-.mcb-wa{background:var(--red);color:#fff;}
-
 /* ---------- Destacados ---------- */
 .destacados-grid{
   display:grid;
@@ -728,18 +711,6 @@ footer .logo{color:#fbf1de;}
 @media (max-width:780px){
   .nav-cta .btn-white{display:none;}
   .nav-cta{gap:10px;}
-
-  body{padding-bottom:var(--mobile-bar-h);}
-  .wa-float{display:none;}
-  .mobile-cta-bar{
-    display:flex;
-    position:fixed;
-    left:0;right:0;bottom:0;
-    z-index:180;
-    border-top:var(--border);
-    padding-bottom:env(safe-area-inset-bottom,0);
-  }
-  .cookie-banner{bottom:calc(var(--mobile-bar-h) + 12px);}
 
   section{padding:52px 0;}
   .hero{padding:calc(var(--header-h) + 24px) 0 36px;}
