@@ -76,3 +76,37 @@ cookieReject.addEventListener('click', () => {
   cookieBanner.classList.remove('show');
   positionWaFloat();
 });
+
+/* Ventanita para llamar */
+const callModal = document.getElementById('callModal');
+const callModalClose = document.getElementById('callModalClose');
+const callModalCopy = document.getElementById('callModalCopy');
+const callModalMsg = document.getElementById('callModalMsg');
+const callModalNumber = document.getElementById('callModalNumber').textContent.trim();
+
+function openCallModal() {
+  callModal.classList.add('show');
+  callModalMsg.textContent = '';
+}
+function closeCallModal() {
+  callModal.classList.remove('show');
+}
+
+document.querySelectorAll('.js-call-modal').forEach(btn => {
+  btn.addEventListener('click', openCallModal);
+});
+callModalClose.addEventListener('click', closeCallModal);
+callModal.addEventListener('click', (e) => {
+  if (e.target === callModal) closeCallModal();
+});
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeCallModal();
+});
+
+callModalCopy.addEventListener('click', () => {
+  navigator.clipboard.writeText(callModalNumber).then(() => {
+    callModalMsg.textContent = '¡Número copiado!';
+  }).catch(() => {
+    callModalMsg.textContent = 'Cópialo a mano: ' + callModalNumber;
+  });
+});

@@ -123,6 +123,71 @@ section{padding:90px 0;}
 .btn-white{background:#fff;color:var(--ink);}
 .btn-block{width:100%;}
 
+/* ---------- Ventanita para llamar ---------- */
+.call-modal{
+  display:none;
+  position:fixed;
+  inset:0;
+  z-index:210;
+  background:rgba(36,28,18,.55);
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+}
+.call-modal.show{display:flex;}
+.call-modal-box{
+  position:relative;
+  background:var(--card);
+  border:var(--border);
+  border-radius:20px;
+  box-shadow:var(--shadow);
+  padding:40px 32px 32px;
+  max-width:340px;
+  width:100%;
+  text-align:center;
+}
+.call-modal-close{
+  position:absolute;
+  top:14px; right:14px;
+  width:32px;height:32px;
+  border-radius:50%;
+  border:2px solid var(--ink);
+  background:#fff;
+  color:var(--ink);
+  font-size:.9rem;
+  font-weight:700;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.call-modal-icon{font-size:2.4rem;display:block;margin-bottom:10px;}
+.call-modal-box h3{
+  font-family:var(--font-display);
+  font-weight:400;
+  font-size:1.5rem;
+  color:var(--ink);
+  margin-bottom:18px;
+}
+.call-modal-number{
+  font-family:var(--font-display);
+  font-size:2rem;
+  letter-spacing:.02em;
+  color:var(--red);
+  background:var(--paper-alt);
+  border:2px dashed var(--ink);
+  border-radius:14px;
+  padding:14px 10px;
+  margin-bottom:20px;
+}
+.call-modal-copy-msg{
+  font-size:.82rem;
+  font-weight:700;
+  color:var(--teal);
+  margin-top:10px;
+  min-height:1.2em;
+}
+
 /* ---------- Cookie banner ---------- */
 .cookie-banner{
   position:fixed;
