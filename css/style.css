@@ -351,25 +351,6 @@ section{padding:90px 0;}
 
 .hero-actions{display:flex;flex-wrap:wrap;gap:16px;}
 
-/* ---------- WhatsApp float ---------- */
-.wa-float{
-  position:fixed;
-  right:20px;
-  bottom:20px;
-  width:60px;height:60px;
-  border-radius:50%;
-  background:#25D366;
-  border:var(--border);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  z-index:170;
-  box-shadow:var(--shadow-sm);
-  transition:transform .2s;
-}
-.wa-float:hover{transform:scale(1.06);}
-.wa-float svg{width:30px;height:30px;fill:#fff;}
-
 /* ---------- Destacados ---------- */
 .destacados-grid{
   display:grid;

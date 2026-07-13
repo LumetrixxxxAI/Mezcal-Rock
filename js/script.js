@@ -49,32 +49,19 @@ nextBtn.addEventListener('click', () => scrollReviews(1));
 const cookieBanner = document.getElementById('cookieBanner');
 const cookieAccept = document.getElementById('cookieAccept');
 const cookieReject = document.getElementById('cookieReject');
-const waFloat = document.querySelector('.wa-float');
 const COOKIE_KEY = 'mezcalrock_cookie_choice';
-
-function positionWaFloat() {
-  if (cookieBanner.classList.contains('show')) {
-    waFloat.style.bottom = (cookieBanner.offsetHeight + 32) + 'px';
-  } else {
-    waFloat.style.bottom = '';
-  }
-}
 
 if (!localStorage.getItem(COOKIE_KEY)) {
   cookieBanner.classList.add('show');
 }
-positionWaFloat();
-window.addEventListener('resize', positionWaFloat);
 
 cookieAccept.addEventListener('click', () => {
   localStorage.setItem(COOKIE_KEY, 'accepted');
   cookieBanner.classList.remove('show');
-  positionWaFloat();
 });
 cookieReject.addEventListener('click', () => {
   localStorage.setItem(COOKIE_KEY, 'rejected');
   cookieBanner.classList.remove('show');
-  positionWaFloat();
 });
 
 /* Ventanita para llamar */
